@@ -9,6 +9,7 @@ if (5>2):
     x = "awesome"
 
 def myfunc():
+
   x = "fantastic"
   print("Python is " + x)
 
