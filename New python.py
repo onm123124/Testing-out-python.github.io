@@ -1,3 +1,7 @@
+from queue import PriorityQueue
+from re import A
+
+
 if (5>2):
     print("I know maths")
     #cool
@@ -16,4 +20,7 @@ def myfunc():
 myfunc()
 
 print("Python is " + x)
-print (myvar)
+
+people = ["Fat Sally", "Dumb John", "not cool James"]
+x, y, z=  people
+print(x, y, z)
