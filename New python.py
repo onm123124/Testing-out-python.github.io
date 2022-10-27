@@ -2,6 +2,7 @@ from ast import Str
 from queue import PriorityQueue
 from re import A
 from sqlite3 import adapt
+from typing import no_type_check
 
 
 if (5>2):
@@ -33,5 +34,5 @@ z = 1j   # complex
 
 if (9>2):
   print(z)
-  if not:
-    print(x)
+
+
