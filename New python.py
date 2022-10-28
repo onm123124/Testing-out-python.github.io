@@ -38,6 +38,3 @@ z = 1j   # complex
 
 if (2<1):
   print (x)
-  Button
-  
-
