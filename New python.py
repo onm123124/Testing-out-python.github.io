@@ -54,3 +54,9 @@ if myFunction():
   print("YES!")
 else:
   print("NO!")
+
+x = "tired of"
+y = "I am"
+z = "school"
+
+print (y, x, z)
