@@ -1,7 +1,7 @@
 from ast import Str
 from cgi import parse_header
 from ctypes import py_object
-
+from tkinter import*
 from queue import PriorityQueue
 from re import A, X
 from sqlite3 import adapt
@@ -55,3 +55,9 @@ if myFunction():
   print("YES!")
 else:
   print("NO!")
+
+
+  #button code
+  tk = Tk()
+  btn = Button(tk, text="I am a button lol")
+  btn.pack()
