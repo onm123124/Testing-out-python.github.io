@@ -9,7 +9,9 @@ from telnetlib import theNULL
 from tkinter.tix import ButtonBox
 from tkinter.ttk import Button
 from typing import no_type_check
+import turtle
 
+aturtle=turtle
 
 if (5>2):
     print("I know maths")

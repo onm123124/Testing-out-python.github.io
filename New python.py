@@ -1,63 +1,21 @@
-from ast import Str
-from cgi import parse_header
-from ctypes import py_object
-from tkinter import*
-from queue import PriorityQueue
-from re import A, X
-from sqlite3 import adapt
-from telnetlib import theNULL
-from tkinter.tix import ButtonBox
-from tkinter.ttk import Button
-from typing import no_type_check
 
+import discord
 
-if (5>2):
-    print("I know maths")
-    #cool
+intents = discord.Intents.default()
+intents.message_content = True
 
-    x = 5
-    y = 5    
-    print(x + y) 
-    myvar= "Maths"
-    x = "awesome"
+client = discord.Client(intents=intents)
 
-def myfunc():
+@client.event
+async def on_ready():
+    print(f'We have logged in as {client.user}')
 
-  x = "fantastic"
-  print("Python is " + x)
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
 
-myfunc()
+    if message.content.startswith('$hello'):
+        await message.channel.send('Hello!')
 
-print("Python is " + x)
-
-people = ["Fat Sally", "Dumb John", "not cool James"]
-x, y, z=  people
-print(x, y, z)
-
-x = 1    # int
-y = 2.8  # float
-z = 1j   # complex
-if (2<1):
-  print (x)
-
-  #Text Type:	str
-#Numeric Types:	int, float, complex
-#Sequence Types:	list, tuple, range
-#Mapping Type:	dict
-#Set Types:	set, frozenset
-#Boolean Type:	bool
-#Binary Types:	bytes, bytearray, memoryview
-#None Type:	NoneType
-def myFunction() :
-  return True
-
-if myFunction():
-  print("YES!")
-else:
-  print("NO!")
-
-
-  #button code
-  tk = Tk()
-  btn = Button(tk, text="I am a button lol")
-  btn.pack()
+client.run('your token here')
