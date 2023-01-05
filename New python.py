@@ -1,21 +1,9 @@
+weight = input("Wieght: ")
+unit = input("(K)ilograms or (L)bs: ")
+Kilograms = float(float(weight) * 2.204)
+Pounds = float(float(weight) // 2.204) 
+if unit == "K" or unit == "k":
+    print("Your weight in kilos is: " + str(Kilograms))
 
-import discord
-
-intents = discord.Intents.default()
-intents.message_content = True
-
-client = discord.Client(intents=intents)
-
-@client.event
-async def on_ready():
-    print(f'We have logged in as {client.user}')
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
-
-client.run('your token here')
+if unit == "L" or unit == "l":
+    print("Your weight in pounds is: " + str(Pounds))
