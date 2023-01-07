@@ -1,4 +1,4 @@
-weight = input("Wieght: ")
+weight = input("Weight: ")
 unit = input("Convert to (K)ilograms or (L)bs: ")
 Kilograms = float(float(weight) // 2.204)
 Pounds = float(float(weight) * 2.204) 
